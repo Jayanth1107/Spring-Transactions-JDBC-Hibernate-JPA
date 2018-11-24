@@ -2,6 +2,7 @@ package com.jay.services;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -15,6 +16,7 @@ import com.jay.repositories.AccountRepository;
 @Profile("test")
 public class AccountService {
 	
+	@Autowired
 	private AccountRepository accountRepository;
 	
 	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
