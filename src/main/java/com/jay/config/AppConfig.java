@@ -49,7 +49,7 @@ public class AppConfig {
 	public DataSource datasourceForProd() {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName(env.getProperty("db.driver"));
-		dataSource.setUrl("db.url");
+		dataSource.setUrl(env.getProperty("db.url"));
 		dataSource.setUsername(env.getProperty("db.username"));
 		dataSource.setPassword(env.getProperty("db.password"));
 		
